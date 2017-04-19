@@ -1,13 +1,13 @@
-# openrally
+# OpenRally.org
 OpenRally.org - Establishing Rally Interoperability Standards For The World Ahead
 
 Except where otherwise noted, content on this site is licensed under a Creative Commons Attribution 4.0 International license
 
-##projects
+## Projects
 * OpenRally Enhanced GPX format
 * OpenRally Roadbook Exchange format
 
-##collaborators
+## Collaborators
 * ICO Racing
 * Rally Navigator
 * CoMaster
@@ -19,10 +19,10 @@ Except where otherwise noted, content on this site is licensed under a Creative 
 * Tulip
 * Rally Blitz
 
-##Mailing Lists
+## Mailing Lists
 For the latest news and announcements, subscribe to the OpenRally.org new mailing list by sending an email to [openrallynews-request](mailto:openrallynews-request@freelists.org?subject=subscribe) with 'subscribe' in the Subject field.
 
-##OpenRally Enhanced GPX Format v0.1-DRAFT
+## OpenRally Enhanced GPX Format v0.1-DRAFT
 The new format exports formatted metadata about the route so that other applications can interpret the data directly, without elaborate string parsing. Standard GPX fields are not modified for computer consumption. The format has full support for WPM, WPE, WPS, DZ, FZ, neutralizations, ASS, DSS, Stops, Checkpoints and more. 
 
 ```xml
