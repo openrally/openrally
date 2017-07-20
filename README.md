@@ -22,10 +22,10 @@ Except where otherwise noted, content on this site is licensed under a Creative 
 ## Mailing Lists
 For the latest news and announcements, subscribe to the OpenRally.org new mailing list by sending an email to [openrallynews-request](mailto:openrallynews-request@freelists.org?subject=subscribe) with 'subscribe' in the Subject field.
 
-## OpenRally Enhanced GPX Format v0.1-DRAFT
+## OpenRally Enhanced GPX Format v0.2-DRAFT
 The new format exports formatted metadata about the route so that other applications can interpret the data directly, without elaborate string parsing. Standard GPX fields are not modified for computer consumption. The format has full support for WPM, WPE, WPS, DZ, FZ, neutralizations, ASS, DSS, Stops, Checkpoints and more. 
 
-###What's new in version 0.2:
+###What's new in version 0.2-DRAFT:
 * units specified in metadata extension (required)
 * total distance specified in metadata extension (optional)
 * waypoint distance added (optional)
@@ -33,7 +33,7 @@ The new format exports formatted metadata about the route so that other applicat
 
 ```xml
 <?xml version='1.0' encoding='UTF-8' standalone='no' ?>
-<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:openrally="http://www.openrally.org/xmlschemas/GpxExtensions/v0.2" ... >
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:openrally="http://www.openrally.org/xmlschemas/GpxExtensions/v0.2-DRAFT" ... >
 <metadata> 
 	<extensions>
 		<openrally:units>metric</openrally:units>
