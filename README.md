@@ -25,119 +25,17 @@ For the latest news and announcements, subscribe to the OpenRally.org new mailin
 ## OpenRally Enhanced GPX Format v0.2-DRAFT
 The new format exports formatted metadata about the route so that other applications can interpret the data directly, without elaborate string parsing. Standard GPX fields are not modified for computer consumption. The format has full support for WPM, WPE, WPS, DZ, FZ, neutralizations, ASS, DSS, Stops, Checkpoints and more. 
 
-###What's new in version 0.2-DRAFT:
+##What's new in version 0.2-DRAFT:
 * units specified in metadata extension (required)
 * total distance specified in metadata extension (optional)
 * waypoint distance added (optional)
 * many additional tags for cross-country and road/stage rallies (thanks Rally Navigator)
 
-```xml
-<?xml version='1.0' encoding='UTF-8' standalone='no' ?>
-<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:openrally="http://www.openrally.org/xmlschemas/GpxExtensions/v0.2-DRAFT" ... >
-<metadata> 
-	<extensions>
-		<openrally:units>metric</openrally:units>
-		<openrally:distance>33.86</openrally:distance>
-	</extensions>
-</metadata>
+##Check out example.gpx and openrally.xsd
 
-<wpt ...>
-	<extensions>
-		<openrally:distance>0.35</openrally:distance>
-		<openrally:wpe/>
-		<openrally:dss/>
-	</extensions>
-</wpt>
+##Testing/validation
+We test and validate using test.sh, which is just a wrapper around xmllint.
 
-<wpt ...>
-	<extensions>
-		<openrally:dz/>
-		<openrally:speed>65</openrally:speed>
-	</extensions>
-</wpt>
+$ ./test.sh 
+example.gpx validates
 
-<wpt ...>
-	<extensions>
-		<openrally:fz/>
-	</extensions>
-</wpt>
-
-<wpt ...>
-	<extensions>
-		<openrally:wpm open='800' clear='20'/>
-	</extensions>
-</wpt>
-
-<wpt ...>
-	<extensions>
-		<openrally:wps open='800' clear='20'/>
-	</extensions>
-</wpt>
-
-<wpt ...>
-	<extensions>
-		<openrally:stop/>
-	</extensions>
-</wpt>
-
-<wpt ...>
-	<extensions>
-		<openrally:checkpoint/>
-	</extensions>
-</wpt>
-
-<wpt ...>
-	<extensions>
-		<openrally:neutralization/>
-	</extensions>
-</wpt>
-
-<wpt ...>
-	<extensions>
-		<openrally:ass/>
-	</extensions>
-</wpt>
-
-<wpt ...>
-	<extensions>
-		<openrally:timecontrol/>
-		<openrally:startspecialstage/>
-		<openrally:finishspecialstage/>
-		<openrally:stopcontrol/>
-		<openrally:resettozero/>
-		<openrally:capheading/>
-		<openrally:gps/>
-		<openrally:passagecontrol/>
-		<openrally:fuel/>
-		<openrally:endfuel/>
-		<openrally:endofzone/>
-		<openrally:radio/>
-		<openrally:medical/>
-		<openrally:begintireservice/>
-		<openrally:endtireservice/>
-		<openrally:helicopter/>
-		<openrally:police/>
-		<openrally:fire/>
-		<openrally:medical/>
-		<openrally:media/>
-		<openrally:spectators/>
-		<openrally:toilets/>
-		<openrally:giveway/>
-		<openrally:sensitivezone/></p>
-		<openrally:onedanger/>
-		<openrally:twodanger/>
-		<openrally:threedanger/>
-		<openrally:startofassistance/>
-		<openrally:finishofassistance/>
-		<openrally:startofzone/>
-		<openrally:endofzone/>
-		<openrally:checkpoint/>
-		<openrally:waypointeclipse/>
-		<openrally:waypointsafety/>
-		<openrally:waypointmasked/>
-		<openrally:village/>
-	</extensions>
-</wpt>
-
-</gpx>
-```

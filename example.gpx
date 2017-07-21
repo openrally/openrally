@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no' ?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" version="1.1" creator="OpenRally.org" xmlns:openrally="http://www.openrally.org/xmlschemas/GpxExtensions/v0.2-DRAFT">
+	<metadata> 
+		<extensions>
+			<openrally:units>metric</openrally:units>
+			<openrally:distance>33.86</openrally:distance>
+		</extensions>
+	</metadata>
+	<wpt lat="0" lon="0">
+		<extensions>
+			<openrally:distance>0.35</openrally:distance>
+			<openrally:wpe/>
+			<openrally:dss/>
+			<openrally:dz/>
+			<openrally:speed>65</openrally:speed>
+			<openrally:fz/>
+			<openrally:wpm open='800' clear='20'/>
+			<openrally:wps open='800' clear='20'/>
+			<openrally:stop/>
+			<openrally:checkpoint/>
+			<openrally:neutralization/>
+			<openrally:ass/>
+			<openrally:timecontrol/>
+			<openrally:startspecialstage/>
+			<openrally:finishspecialstage/>
+			<openrally:stopcontrol/>
+			<openrally:resettozero/>
+			<openrally:capheading/>
+			<openrally:gps/>
+			<openrally:passagecontrol/>
+			<openrally:fuel/>
+			<openrally:endfuel/>
+			<openrally:endofzone/>
+			<openrally:radio/>
+			<openrally:medical/>
+			<openrally:begintireservice/>
+			<openrally:endtireservice/>
+			<openrally:helicopter/>
+			<openrally:police/>
+			<openrally:fire/>
+			<openrally:medical/>
+			<openrally:media/>
+			<openrally:spectators/>
+			<openrally:toilets/>
+			<openrally:giveway/>
+			<openrally:sensitivezone/>
+			<openrally:onedanger/>
+			<openrally:twodanger/>
+			<openrally:threedanger/>
+			<openrally:startofassistance/>
+			<openrally:finishofassistance/>
+			<openrally:startofzone/>
+			<openrally:endofzone/>
+			<openrally:checkpoint/>
+			<openrally:waypointeclipse/>
+			<openrally:waypointsafety/>
+			<openrally:waypointmasked/>
+			<openrally:village/>
+		</extensions>
+	</wpt>
+</gpx>
