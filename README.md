@@ -25,15 +25,15 @@ For the latest news and announcements, subscribe to the OpenRally.org new mailin
 ## OpenRally Enhanced GPX Format v0.2-DRAFT
 The new format exports formatted metadata about the route so that other applications can interpret the data directly, without elaborate string parsing. Standard GPX fields are not modified for computer consumption. The format has full support for WPM, WPE, WPS, DZ, FZ, neutralizations, ASS, DSS, Stops, Checkpoints and more. 
 
-##What's new in version 0.2-DRAFT:
+## What's new in version 0.2-DRAFT:
 * units specified in metadata extension (required)
 * total distance specified in metadata extension (optional)
 * waypoint distance added (optional)
 * many additional tags for cross-country and road/stage rallies (thanks Rally Navigator)
 
-##Check out example.gpx and openrally.xsd
+## Check out example.gpx and openrally.xsd
 
-##Testing/validation
+## Testing/validation
 We test and validate using test.sh, which is just a wrapper around xmllint.
 
 $ ./test.sh 
