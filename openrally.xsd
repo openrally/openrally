@@ -1,5 +1,11 @@
 <?xml version="1.0"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.openrally.org/xmlschemas/GpxExtensions/v0.2-DRAFT" xmlns="http://www.openrally.org/xmlschemas/GpxExtensions/v0.2-DRAFT">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	attributeFormDefault="unqualified"
+	elementFormDefault="qualified"
+	targetNamespace="http://www.openrally.org/xmlschemas/GpxExtensions/v0.2-DRAFT"
+	xmlns="http://www.openrally.org/xmlschemas/GpxExtensions/v0.2-DRAFT"
+  xmlns:svg="http://www.w3.org/2000/svg">
+
 	<xs:simpleType name="marker">
 		<xs:restriction base="xs:string"/>
 	</xs:simpleType>
@@ -47,6 +53,8 @@
 			</xs:simpleContent>
 		</xs:complexType>
 	</xs:element>
+	<xs:element name="tulip"/>
+	<xs:element name="notes"/>
 	<xs:element name="stop" type="marker"/>
 	<xs:element name="checkpoint" type="marker"/>
 	<xs:element name="neutralization" type="marker"/>

@@ -22,8 +22,12 @@ Except where otherwise noted, content on this site is licensed under a Creative 
 ## Mailing Lists
 For the latest news and announcements, subscribe to the OpenRally.org new mailing list by sending an email to [openrallynews-request](mailto:openrallynews-request@freelists.org?subject=subscribe) with 'subscribe' in the Subject field.
 
-## OpenRally Enhanced GPX Format v0.2-DRAFT
-The new format exports formatted metadata about the route so that other applications can interpret the data directly, without elaborate string parsing. Standard GPX fields are not modified for computer consumption. The format has full support for WPM, WPE, WPS, DZ, FZ, neutralizations, ASS, DSS, Stops, Checkpoints and more. 
+## OpenRally Enhanced GPX Format v0.3-DRAFT
+The new format exports formatted metadata about the route so that other applications can interpret the data directly, without elaborate string parsing. Standard GPX fields are not modified for computer consumption. The format has full support for WPM, WPE, WPS, DZ, FZ, neutralizations, ASS, DSS, Stops, Checkpoints and more.
+
+## What's new in version 0.3-DRAFT:
+* SVG tulips (including raster images)
+* SVG and text notes
 
 ## What's new in version 0.2-DRAFT:
 * units specified in metadata extension (required)
@@ -36,6 +40,5 @@ The new format exports formatted metadata about the route so that other applicat
 ## Testing/validation
 We test and validate using test.sh, which is just a wrapper around xmllint.
 
-$ ./test.sh 
+$ ./test.sh
 example.gpx validates
-
