@@ -38,7 +38,9 @@ The new format exports formatted metadata about the route so that other applicat
 ## Check out example.gpx and openrally.xsd
 
 ## Testing/validation
-We test and validate using test.sh, which is just a wrapper around xmllint.
+We test and validate [example.gpx] using [test.sh], which is just a wrapper around xmllint.
 
+```
 $ ./test.sh
 example.gpx validates
+```
