@@ -18,7 +18,7 @@
 			<cc:dz/>
 			<cc:speed>65</cc:speed>
 			<cc:fz/>
-			<cc:wpm open='800' clear='20'/>
+			<cc:wpm open='800' clear='20' name="XYZ"/>
 			<cc:wps open='800' clear='20'/>
 			<cc:stop/>
 			<cc:checkpoint/>
