@@ -1,0 +1,148 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	attributeFormDefault="unqualified"
+	elementFormDefault="qualified"
+	targetNamespace="http://www.openrally.org/xmlschemas/GpxExtensions/v1.0-Cross-Country-DRAFT"
+	xmlns="http://www.openrally.org/xmlschemas/GpxExtensions/v1.0-Cross-Country-DRAFT"
+  xmlns:svg="http://www.w3.org/2000/svg">
+
+	<xs:element name="units" default="metric" type="unitsType">
+		<!-- The valid "units" are "metric" or "statute". Under "metric", route distances are in kilometers, speeds are in kph, and waypoint radii are in meters. Under the "statute" measurement system, route distances are in statute miles, speeds are in mph, and waypoint radii are in yards. -->
+	</xs:element>
+
+
+	<xs:element name="distance" type="distance" />
+	<xs:element name="danger"		type="dangerType" />
+	<xs:element name="cap" type="capType"/>
+	<!--
+	Duplicate of "cap" <xs:element name="capheading" type="marker"/>
+	Replaced by "danger" <xs:element name="onedanger" type="marker"/>
+	Replaced by "danger" <xs:element name="twodanger" type="marker"/>
+	Replaced by "danger" <xs:element name="threedanger" type="marker"/>
+	-->
+
+
+	<!-- start/stop -->
+	<xs:element name="dss" type="marker"/>
+	<xs:element name="ass" type="marker"/>
+	<!--
+	Duplicate of "dss" <xs:element name="startspecialstage" type="marker"/>
+	Duplicate of "ass" <xs:element name="finishspecialstage" type="marker"/>
+	-->
+
+
+	<!-- speed zones -->
+	<xs:element name="dz" type="marker"/>
+	<xs:element name="speed" type="speed"/>
+	<xs:element name="fz" type="marker"/>
+	<!-- Duplicate of "fz" <xs:element name="endofzone" type="marker"/> -->
+
+
+	<!-- WP[x] waypoints -->
+	<xs:element name="wpm" type="waypointType" />
+	<xs:element name="wpe" type="waypointType" />
+	<xs:element name="wps" type="waypointType" />
+	<xs:element name="wpc" type="waypointType" />
+	<!--
+	Duplicate of "wpe" <xs:element name="waypointeclipse" type="marker"/>
+	Duplicate of "wps" <xs:element name="waypointsafety" type="marker"/>
+	Duplicate of "wpm" <xs:element name="waypointmasked" type="marker"/>
+	-->
+
+
+	<!-- drawing elements -->
+	<xs:element name="tulip" type="drawingType"/>
+	<xs:element name="notes" type="drawingType"/>
+
+	<!-- other control points -->
+	<xs:element name="stop" type="marker"/>
+	<xs:element name="checkpoint" type="marker"/>
+	<xs:element name="neutralization" type="marker"/>
+	<xs:element name="timecontrol" type="marker"/>
+	<xs:element name="fuel" type="marker"/>
+	<xs:element name="reset"/>
+	<!--
+	Duplicate of "stop" <xs:element name="stopcontrol" type="marker"/>
+	replaced by reset <xs:element name="resettozero" type="marker"/>
+  -->
+
+
+	<!-- unknown practical use for cross country
+	<xs:element name="gps" type="marker"/>
+	<xs:element name="passagecontrol" type="marker"/>
+	<xs:element name="endfuel" type="marker"/>
+	<xs:element name="radio" type="marker"/>
+	<xs:element name="medical" type="marker"/>
+	<xs:element name="begintireservice" type="marker"/>
+	<xs:element name="endtireservice" type="marker"/>
+	<xs:element name="helicopter" type="marker"/>
+	<xs:element name="police" type="marker"/>
+	<xs:element name="fire" type="marker"/>
+	<xs:element name="media" type="marker"/>
+	<xs:element name="spectators" type="marker"/>
+	<xs:element name="toilets" type="marker"/>
+	<xs:element name="giveway" type="marker"/>
+	<xs:element name="sensitivezone" type="marker"/>
+	<xs:element name="startofassistance" type="marker"/>
+	<xs:element name="finishofassistance" type="marker"/>
+	<xs:element name="startofzone" type="marker"/>
+	<xs:element name="village" type="marker"/>
+  -->
+
+	<!-- data types -->
+	<xs:complexType name="waypointType">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute type="xs:string" name="name"/>
+				<xs:attribute type="xs:positiveInteger" name="open" default="800"/>
+				<xs:attribute type="xs:positiveInteger" name="clear" default="200"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:simpleType name="unitsType">
+		<xs:restriction base="xs:NMTOKEN">
+			<xs:enumeration value="metric"/>
+			<xs:enumeration value="statue"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="dangerType">
+		<xs:restriction base="xs:NMTOKEN">
+			<xs:enumeration value="1"/> <!-- ! -->
+			<xs:enumeration value="2"/> <!-- !! -->
+			<xs:enumeration value="3"/> <!-- !!! -->
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="marker">
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="distance" >
+		<xs:restriction base="xs:decimal">
+			<xs:minInclusive value="0"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="speed">
+		<xs:restriction base="xs:positiveInteger">
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="capType">
+		<xs:restriction base="xs:integer">
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="360"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="drawingType">
+		<xs:restriction base="xs:string"/>
+		<!--
+		*Should* contain SVG, wrapped in CDATA to allow apps to
+		parse SVG optionally. Not all apps will have rendering responsibility.
+
+		*Should not* reference external hrefs. That defeats the point of
+		having everything in one complete file. Access to internet may well not
+		be possible at the time and place the GPX is loaded/parsed.
+
+		Example:
+		<o:tulip><![CDATA[<svg><text>Hello, World!</text></svg>]]></o:tulip>
+	  -->
+	</xs:simpleType>
+
+</xs:schema>

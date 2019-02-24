@@ -19,8 +19,24 @@ Except where otherwise noted, content on this site is licensed under a Creative 
 * Tulip
 * Rally Blitz
 
+#Why GPX?
+GPX is the most common geo-mapping file format. Most devices which record tracks or have online maps can import/export GPX format.
+
+GPX is also a format with many existing tools for converting.
+
+##But GPX is XML and XML is too verbose...
+It's true that XML *can* be more verbose than a binary format. However, once image data for tulips and notes fields are included, the weight of the XML text is negligible.
+
 ## Mailing Lists
 For the latest news and announcements, subscribe to the OpenRally.org new mailing list by sending an email to [openrallynews-request](mailto:openrallynews-request@freelists.org?subject=subscribe) with 'subscribe' in the Subject field.
+
+## What's new in v1.0-Cross-Country-DRAFT:
+* Separation of cross-country tags from road rally tags
+* Removal of duplicate tags
+* Specified sensible defaults in XSD, per FIM current regulations
+
+###Implementation notes
+Authors of software which are consuming OpenRally GPX files should inspect the version of the schema specified in the GPX document. Parsing should be according to the version specified.
 
 ## OpenRally Enhanced GPX Format v0.3-DRAFT
 The new format exports formatted metadata about the route so that other applications can interpret the data directly, without elaborate string parsing. Standard GPX fields are not modified for computer consumption. The format has full support for WPM, WPE, WPS, DZ, FZ, neutralizations, ASS, DSS, Stops, Checkpoints and more.

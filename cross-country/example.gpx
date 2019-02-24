@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no' ?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" version="1.1" creator="OpenRally.org"
+	xmlns:cc="http://www.openrally.org/xmlschemas/GpxExtensions/v1.0-Cross-Country-DRAFT">
+	<metadata>
+		<extensions>
+			<cc:units>metric</cc:units>
+			<cc:distance>33.86</cc:distance>
+		</extensions>
+	</metadata>
+
+	<wpt lat="0" lon="0"> <extensions> <cc:distance>0.0</cc:distance> </extensions> </wpt>
+
+	<wpt lat="0" lon="0">
+		<extensions>
+			<cc:distance>0.35</cc:distance>
+			<cc:wpe/>
+			<cc:dss/>
+			<cc:dz/>
+			<cc:speed>65</cc:speed>
+			<cc:fz/>
+			<cc:wpm open='800' clear='20'/>
+			<cc:wps open='800' clear='20'/>
+			<cc:stop/>
+			<cc:checkpoint/>
+			<cc:neutralization/>
+			<cc:ass/>
+			<cc:timecontrol/>
+			<cc:cap>360</cc:cap>
+			<cc:fuel/>
+			<cc:danger>2</cc:danger>
+			<cc:tulip>
+				<![CDATA[
+				<svg>
+					<img href="data:image/png;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
+				</svg>
+				]]>
+			</cc:tulip>
+			<cc:notes>
+				<![CDATA[
+				<svg>
+					<img href="data:image/png;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
+					<text>Massive Erosion</text>
+				</svg>
+				]]>
+			</cc:notes>
+		</extensions>
+	</wpt>
+</gpx>
