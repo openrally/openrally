@@ -32,7 +32,7 @@ GPX is the most common geo-mapping file format. Most devices which record tracks
 GPX is also a format with many existing tools for converting.
 
 ### But GPX is XML and XML is too verbose...
-It's true that XML *can* be more verbose than a binary format. However, once image data for tulips and notes fields are included, the weight of the XML text is negligible. Keep in mind, this is an *interchange* format, not the required format for storage or network transfer. As such, ease of use is paramount.
+It's true that XML *can* be more verbose than a binary format. However, once image data for tulips and notes fields are included, the weight of the XML text is negligible. Keep in mind, this is an *interchange* format, not the required format for storage or network transfer, which are entirely int he domain of the user. As an interchange format, ease of use is paramount.
 
 ## What's new in v1.0-Cross-Country-DRAFT:
 * Separation of cross-country tags from road rally tags

@@ -6,36 +6,36 @@
 	xmlns="http://www.openrally.org/xmlschemas/GpxExtensions/v1.0-Cross-Country-DRAFT"
   xmlns:svg="http://www.w3.org/2000/svg">
 
-	<xs:element name="units" default="metric" type="unitsType">
+	<xs:element name="units" type="unitsType">
 		<!-- The valid "units" are "metric" or "statute". Under "metric", route distances are in kilometers, speeds are in kph, and waypoint radii are in meters. Under the "statute" measurement system, route distances are in statute miles, speeds are in mph, and waypoint radii are in yards. -->
 	</xs:element>
 
 
-	<xs:element name="distance" type="distance" />
+	<xs:element name="distance" type="distanceType" />
 	<xs:element name="danger"		type="dangerType" />
 	<xs:element name="cap" type="capType"/>
 	<!--
-	Duplicate of "cap" <xs:element name="capheading" type="marker"/>
-	Replaced by "danger" <xs:element name="onedanger" type="marker"/>
-	Replaced by "danger" <xs:element name="twodanger" type="marker"/>
-	Replaced by "danger" <xs:element name="threedanger" type="marker"/>
+	Duplicate of "cap" <xs:element name="capheading" type="markerType"/>
+	Replaced by "danger" <xs:element name="onedanger" type="markerType"/>
+	Replaced by "danger" <xs:element name="twodanger" type="markerType"/>
+	Replaced by "danger" <xs:element name="threedanger" type="markerType"/>
 	-->
 
 
 	<!-- start/stop -->
-	<xs:element name="dss" type="marker"/>
-	<xs:element name="ass" type="marker"/>
+	<xs:element name="dss" type="markerType"/>
+	<xs:element name="ass" type="markerType"/>
 	<!--
-	Duplicate of "dss" <xs:element name="startspecialstage" type="marker"/>
-	Duplicate of "ass" <xs:element name="finishspecialstage" type="marker"/>
+	Duplicate of "dss" <xs:element name="startspecialstage" type="markerType"/>
+	Duplicate of "ass" <xs:element name="finishspecialstage" type="markerType"/>
 	-->
 
 
 	<!-- speed zones -->
-	<xs:element name="dz" type="marker"/>
-	<xs:element name="speed" type="speed"/>
-	<xs:element name="fz" type="marker"/>
-	<!-- Duplicate of "fz" <xs:element name="endofzone" type="marker"/> -->
+	<xs:element name="dz" type="markerType"/>
+	<xs:element name="speed" type="speedType"/>
+	<xs:element name="fz" type="markerType"/>
+	<!-- Duplicate of "fz" <xs:element name="endofzone" type="markerType"/> -->
 
 
 	<!-- WP[x] waypoints -->
@@ -44,9 +44,9 @@
 	<xs:element name="wps" type="waypointType" />
 	<xs:element name="wpc" type="waypointType" />
 	<!--
-	Duplicate of "wpe" <xs:element name="waypointeclipse" type="marker"/>
-	Duplicate of "wps" <xs:element name="waypointsafety" type="marker"/>
-	Duplicate of "wpm" <xs:element name="waypointmasked" type="marker"/>
+	Duplicate of "wpe" <xs:element name="waypointeclipse" type="markerType"/>
+	Duplicate of "wps" <xs:element name="waypointsafety" type="markerType"/>
+	Duplicate of "wpm" <xs:element name="waypointmasked" type="markerType"/>
 	-->
 
 
@@ -55,38 +55,38 @@
 	<xs:element name="notes" type="drawingType"/>
 
 	<!-- other control points -->
-	<xs:element name="stop" type="marker"/>
-	<xs:element name="checkpoint" type="marker"/>
-	<xs:element name="neutralization" type="marker"/>
-	<xs:element name="timecontrol" type="marker"/>
-	<xs:element name="fuel" type="marker"/>
-	<xs:element name="reset"/>
+	<xs:element name="stop" type="markerType"/>
+	<xs:element name="checkpoint" type="markerType"/>
+	<xs:element name="neutralization" type="timeType"/>
+	<xs:element name="timecontrol" type="markerType"/>
+	<xs:element name="fuel" type="markerType"/>
+	<xs:element name="reset" type="distanceType"/>
 	<!--
-	Duplicate of "stop" <xs:element name="stopcontrol" type="marker"/>
-	replaced by reset <xs:element name="resettozero" type="marker"/>
+	Duplicate of "stop" <xs:element name="stopcontrol" type="markerType"/>
+	replaced by reset <xs:element name="resettozero" type="markerType"/>
   -->
 
 
 	<!-- unknown practical use for cross country
-	<xs:element name="gps" type="marker"/>
-	<xs:element name="passagecontrol" type="marker"/>
-	<xs:element name="endfuel" type="marker"/>
-	<xs:element name="radio" type="marker"/>
-	<xs:element name="medical" type="marker"/>
-	<xs:element name="begintireservice" type="marker"/>
-	<xs:element name="endtireservice" type="marker"/>
-	<xs:element name="helicopter" type="marker"/>
-	<xs:element name="police" type="marker"/>
-	<xs:element name="fire" type="marker"/>
-	<xs:element name="media" type="marker"/>
-	<xs:element name="spectators" type="marker"/>
-	<xs:element name="toilets" type="marker"/>
-	<xs:element name="giveway" type="marker"/>
-	<xs:element name="sensitivezone" type="marker"/>
-	<xs:element name="startofassistance" type="marker"/>
-	<xs:element name="finishofassistance" type="marker"/>
-	<xs:element name="startofzone" type="marker"/>
-	<xs:element name="village" type="marker"/>
+	<xs:element name="gps" type="markerType"/>
+	<xs:element name="passagecontrol" type="markerType"/>
+	<xs:element name="endfuel" type="markerType"/>
+	<xs:element name="radio" type="markerType"/>
+	<xs:element name="medical" type="markerType"/>
+	<xs:element name="begintireservice" type="markerType"/>
+	<xs:element name="endtireservice" type="markerType"/>
+	<xs:element name="helicopter" type="markerType"/>
+	<xs:element name="police" type="markerType"/>
+	<xs:element name="fire" type="markerType"/>
+	<xs:element name="media" type="markerType"/>
+	<xs:element name="spectators" type="markerType"/>
+	<xs:element name="toilets" type="markerType"/>
+	<xs:element name="giveway" type="markerType"/>
+	<xs:element name="sensitivezone" type="markerType"/>
+	<xs:element name="startofassistance" type="markerType"/>
+	<xs:element name="finishofassistance" type="markerType"/>
+	<xs:element name="startofzone" type="markerType"/>
+	<xs:element name="village" type="markerType"/>
   -->
 
 	<!-- data types -->
@@ -94,8 +94,8 @@
 		<xs:simpleContent>
 			<xs:extension base="xs:string">
 				<xs:attribute type="xs:string" name="name"/>
-				<xs:attribute type="xs:positiveInteger" name="open" default="800"/>
-				<xs:attribute type="xs:positiveInteger" name="clear" default="200"/>
+				<xs:attribute type="xs:positiveInteger" name="open"/>
+				<xs:attribute type="xs:positiveInteger" name="clear"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
@@ -112,15 +112,21 @@
 			<xs:enumeration value="3"/> <!-- !!! -->
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="marker">
+	<xs:simpleType name="markerType">
 		<xs:restriction base="xs:string"/>
 	</xs:simpleType>
-	<xs:simpleType name="distance" >
+	<xs:simpleType name="distanceType" >
 		<xs:restriction base="xs:decimal">
 			<xs:minInclusive value="0"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="speed">
+	<xs:simpleType name="timeType">
+		<!-- time in seconds -->
+		<xs:restriction base="xs:integer">
+			<xs:minInclusive value="0"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="speedType">
 		<xs:restriction base="xs:positiveInteger">
 		</xs:restriction>
 	</xs:simpleType>
