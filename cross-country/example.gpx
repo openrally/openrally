@@ -51,7 +51,7 @@
   <wpt lat="0" lon="0">
     <extensions>
       <cc:distance>0.5</cc:distance>
-      <cc:neutralization>600</cc:neutralization>
+      <cc:neutralization>900</cc:neutralization>
       <cc:fuel/>
     </extensions>
   </wpt>
@@ -74,7 +74,7 @@
 				]]></cc:notes>
     </extensions>
   </wpt>
-	
+
   <!-- or any other tags (using them all at once is nonsensical) -->
   <wpt lat="0" lon="0">
     <extensions>

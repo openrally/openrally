@@ -38,7 +38,7 @@
   <xs:element name="tulip" type="drawingType"/>
   <xs:element name="notes" type="drawingType"/>
   <!-- other control points -->
-  <xs:element name="stop" type="markerType"/>
+  <xs:element name="stop" type="timeType"/>
   <xs:element name="checkpoint" type="markerType"/>
   <xs:element name="neutralization" type="timeType"/>
   <xs:element name="timecontrol" type="markerType"/>
@@ -48,19 +48,27 @@
 	Duplicate of "stop" <xs:element name="stopcontrol" type="markerType"/>
 	Replaced by reset <xs:element name="resettozero" type="markerType"/>
   -->
-  <!-- Propose removal. Unknown practical use.
+
+  <!--
+  safety tags, primarily used in an org's mapping/tracking to locate
+  assets on the course.
+  -->
+  <xs:element name="medical" type="markerType"/>
+	<xs:element name="helicopter" type="markerType"/>
+	<xs:element name="police" type="markerType"/>
+	<xs:element name="fire" type="markerType"/>
+	<xs:element name="spectators" type="markerType"/>
+  <xs:element name="media" type="markerType"/>
+
+  <!--
+  Propose removal from cross-country. Unknown practical use here. Some of these
+  were from road rally users and will remain in their XSD
 	<xs:element name="gps" type="markerType"/>
 	<xs:element name="passagecontrol" type="markerType"/>
 	<xs:element name="endfuel" type="markerType"/>
 	<xs:element name="radio" type="markerType"/>
-	<xs:element name="medical" type="markerType"/>
 	<xs:element name="begintireservice" type="markerType"/>
 	<xs:element name="endtireservice" type="markerType"/>
-	<xs:element name="helicopter" type="markerType"/>
-	<xs:element name="police" type="markerType"/>
-	<xs:element name="fire" type="markerType"/>
-	<xs:element name="media" type="markerType"/>
-	<xs:element name="spectators" type="markerType"/>
 	<xs:element name="toilets" type="markerType"/>
 	<xs:element name="giveway" type="markerType"/>
 	<xs:element name="sensitivezone" type="markerType"/>
@@ -69,6 +77,7 @@
 	<xs:element name="startofzone" type="markerType"/>
 	<xs:element name="village" type="markerType"/>
   -->
+
   <!-- data types -->
   <xs:complexType name="waypointType">
     <xs:simpleContent>
@@ -122,7 +131,7 @@
   <xs:simpleType name="drawingType">
     <xs:restriction base="xs:string"/>
     <!--
-		*Should* contain SVG, wrapped in CDATA to allow apps to
+		*Should* contain SVG tag, wrapped in CDATA to allow apps to
 		parse SVG optionally. Not all apps will have rendering responsibility.
 
 		*Should not* reference external hrefs. That defeats the point of
