@@ -29,6 +29,7 @@
   <xs:element name="wpe" type="waypointType"/>
   <xs:element name="wps" type="waypointType"/>
   <xs:element name="wpc" type="waypointType"/>
+  <xs:element name="wpv" type="waypointType"/>
   <!--
 	Duplicate of "wpe" <xs:element name="waypointeclipse" type="markerType"/>
 	Duplicate of "wps" <xs:element name="waypointsafety" type="markerType"/>
