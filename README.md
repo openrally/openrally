@@ -1,3 +1,5 @@
+# NOTE: Current work is in this branch: https://github.com/openrally/openrally/tree/cc-v1-DRAFT
+
 # OpenRally.org
 OpenRally.org - Establishing Rally Interoperability Standards For The World Ahead
 
