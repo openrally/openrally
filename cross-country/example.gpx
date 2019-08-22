@@ -110,6 +110,7 @@
       <openrally:checkpoint/>
       <openrally:ass/>
       <openrally:timecontrol/>
+      <openrally:timecontrol allowed="60"/>
       <openrally:cap>360</openrally:cap>
     </extensions>
   </wpt>

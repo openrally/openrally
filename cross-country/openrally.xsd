@@ -50,7 +50,7 @@
   <xs:element name="stop" type="timeType"/>
   <xs:element name="checkpoint" type="markerType"/>
   <xs:element name="neutralization" type="timeType"/>
-  <xs:element name="timecontrol" type="markerType"/>
+  <xs:element name="timecontrol" type="timeLimitType"/>
   <xs:element name="fuel" type="markerType"/>
   <xs:element name="reset" type="distanceType"/>
   <!--
@@ -127,6 +127,21 @@
       <xs:minInclusive value="0"/>
     </xs:restriction>
   </xs:simpleType>
+
+  <xs:complexType name="timeLimitType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:integer" name="allowed">
+          <xs:annotation>
+            <xs:documentation xml:lang="en">
+              Number of minutes allowed to get from THIS timecontrol to the NEXT timecontrol.
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
   <xs:simpleType name="timeType">
     <!-- time in seconds -->
     <xs:restriction base="xs:integer">
