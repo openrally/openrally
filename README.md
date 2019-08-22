@@ -22,6 +22,7 @@ OpenRally is a community standard for electronic exchange of rally information. 
 * R3 - Roadbook Rally Raid
 * Tulip
 * Rally Blitz
+* Tripy
 
 ## Mailing Lists
 For the latest news and announcements, subscribe to the OpenRally.org new mailing list by sending an email to [openrallynews-request](mailto:openrallynews-request@freelists.org?subject=subscribe) with 'subscribe' in the Subject field.
@@ -32,40 +33,27 @@ GPX is the most common geo-mapping file format. Most devices which record tracks
 GPX is also a format with many existing tools for converting.
 
 ### But GPX is XML and XML is too verbose...
-It's true that XML *can* be more verbose than a binary format. However, once image data for tulips and notes fields are included, the weight of the XML text is negligible. Keep in mind, this is an *interchange* format, not the required format for storage or network transfer, which are entirely int he domain of the user. As an interchange format, ease of use is paramount.
+It's true that XML *can* be more verbose than a binary format. However, once image data for tulips and notes fields are included, the weight of the XML text is negligible. Keep in mind, this is an *interchange* format, not the required format for storage or network transfer, which are entirely in the domain of the user. As an interchange format, ease of use is paramount.
 
 ## What's new in v1.0-Cross-Country-DRAFT:
 * Separation of cross-country tags from road rally tags
 * Removal of duplicate tags
 * Specified sensible defaults in XSD, per FIM current regulations
-* Formalization of SVG for tulip and notes drawings/icons.
+* Inclusion of tulip and notes drawings/icons via base64 PNG or SVG
 
 ### Implementation notes
-Authors of software which are consuming OpenRally GPX files should inspect the version of the schema specified in the GPX document. Parsing should be according to the version specified.
+Authors of software which are consuming OpenRally GPX files should inspect the version of the schema specified in the GPX document. Parsing should be according to the version specified. We will implement semver.org versioning as of v1.0.0.
 
-## OpenRally Enhanced GPX Format v0.3-DRAFT
-The new format exports formatted metadata about the route so that other applications can interpret the data directly, without elaborate string parsing. Standard GPX fields are not modified for computer consumption. The format has full support for WPM, WPE, WPS, DZ, FZ, neutralizations, ASS, DSS, Stops, Checkpoints and more.
-
-## What's new in version 0.3-DRAFT:
-* SVG tulips (including raster images)
-* SVG and text notes
-
-## What's new in version 0.2-DRAFT:
-* units specified in metadata extension (required)
-* total distance specified in metadata extension (optional)
-* waypoint distance added (optional)
-* many additional tags for cross-country and road/stage rallies (thanks Rally Navigator)
-
-## Check out example.gpx and openrally.xsd for the latest specification
+## Check out cross-country/example.gpx and cross-country/openrally.xsd for the latest specification
 
 ## Testing/validation
-We test and validate using xmllint.
+Please test and validate using xmllint.
 
 ```
 $ cd cross-country
-$ ./validate_schemas.sh
+$ ./validate.sh
 openrally.xsd validates
-../external/gpx.xsd validates
-$ ./validate_example.sh
+../common/gpx-strict.xsd validates
+test_wrapper.xsd validates
 example.gpx validates
 ```

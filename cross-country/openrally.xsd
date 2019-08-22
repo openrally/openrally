@@ -1,5 +1,13 @@
 <?xml version="1.0"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.openrally.org/xmlschemas/GpxExtensions/v1.0-Cross-Country-DRAFT" xmlns:svg="http://www.w3.org/2000/svg" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.openrally.org/xmlschemas/GpxExtensions/v1.0-Cross-Country-DRAFT">
+<xs:schema
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns="http://www.openrally.org/xmlschemas/GpxExtensions/v1.0-Cross-Country-DRAFT"
+  xmlns:svg="http://www.w3.org/2000/svg"
+  attributeFormDefault="unqualified"
+  elementFormDefault="qualified"
+  targetNamespace="http://www.openrally.org/xmlschemas/GpxExtensions/v1.0-Cross-Country-DRAFT"
+  >
+
   <xs:element name="units" type="unitsType">
     <!-- The valid "units" are "metric" or "statute". Under "metric", route distances are in kilometers, speeds are in kph, and waypoint radii are in meters. Under the "statute" measurement system, route distances are in statute miles, speeds are in mph, and waypoint radii are in yards. -->
   </xs:element>
@@ -7,18 +15,18 @@
   <xs:element name="danger" type="dangerType"/>
   <xs:element name="cap" type="capType"/>
   <!--
-	Duplicate of "cap" <xs:element name="capheading" type="markerType"/>
-	Replaced by "danger" <xs:element name="onedanger" type="markerType"/>
-	Replaced by "danger" <xs:element name="twodanger" type="markerType"/>
-	Replaced by "danger" <xs:element name="threedanger" type="markerType"/>
-	-->
+  Duplicate of "cap" <xs:element name="capheading" type="markerType"/>
+  Replaced by "danger" <xs:element name="onedanger" type="markerType"/>
+  Replaced by "danger" <xs:element name="twodanger" type="markerType"/>
+  Replaced by "danger" <xs:element name="threedanger" type="markerType"/>
+  -->
   <!-- start/stop -->
   <xs:element name="dss" type="markerType"/>
   <xs:element name="ass" type="markerType"/>
   <!--
-	Duplicate of "dss" <xs:element name="startspecialstage" type="markerType"/>
-	Duplicate of "ass" <xs:element name="finishspecialstage" type="markerType"/>
-	-->
+  Duplicate of "dss" <xs:element name="startspecialstage" type="markerType"/>
+  Duplicate of "ass" <xs:element name="finishspecialstage" type="markerType"/>
+  -->
   <!-- speed zones -->
   <xs:element name="dz" type="markerType"/>
   <xs:element name="speed" type="speedType"/>
@@ -29,11 +37,12 @@
   <xs:element name="wpe" type="waypointType"/>
   <xs:element name="wps" type="waypointType"/>
   <xs:element name="wpc" type="waypointType"/>
+  <xs:element name="wpv" type="waypointType"/>
   <!--
-	Duplicate of "wpe" <xs:element name="waypointeclipse" type="markerType"/>
-	Duplicate of "wps" <xs:element name="waypointsafety" type="markerType"/>
-	Duplicate of "wpm" <xs:element name="waypointmasked" type="markerType"/>
-	-->
+  Duplicate of "wpe" <xs:element name="waypointeclipse" type="markerType"/>
+  Duplicate of "wps" <xs:element name="waypointsafety" type="markerType"/>
+  Duplicate of "wpm" <xs:element name="waypointmasked" type="markerType"/>
+  -->
   <!-- drawing elements -->
   <xs:element name="tulip" type="drawingType"/>
   <xs:element name="notes" type="drawingType"/>
@@ -45,8 +54,8 @@
   <xs:element name="fuel" type="markerType"/>
   <xs:element name="reset" type="distanceType"/>
   <!--
-	Duplicate of "stop" <xs:element name="stopcontrol" type="markerType"/>
-	Replaced by reset <xs:element name="resettozero" type="markerType"/>
+  Duplicate of "stop" <xs:element name="stopcontrol" type="markerType"/>
+  Replaced by reset <xs:element name="resettozero" type="markerType"/>
   -->
 
   <!--
@@ -54,28 +63,28 @@
   assets on the course.
   -->
   <xs:element name="medical" type="markerType"/>
-	<xs:element name="helicopter" type="markerType"/>
-	<xs:element name="police" type="markerType"/>
-	<xs:element name="fire" type="markerType"/>
-	<xs:element name="spectators" type="markerType"/>
+  <xs:element name="helicopter" type="markerType"/>
+  <xs:element name="police" type="markerType"/>
+  <xs:element name="fire" type="markerType"/>
+  <xs:element name="spectators" type="markerType"/>
   <xs:element name="media" type="markerType"/>
 
   <!--
   Propose removal from cross-country. Unknown practical use here. Some of these
   were from road rally users and will remain in their XSD
-	<xs:element name="gps" type="markerType"/>
-	<xs:element name="passagecontrol" type="markerType"/>
-	<xs:element name="endfuel" type="markerType"/>
-	<xs:element name="radio" type="markerType"/>
-	<xs:element name="begintireservice" type="markerType"/>
-	<xs:element name="endtireservice" type="markerType"/>
-	<xs:element name="toilets" type="markerType"/>
-	<xs:element name="giveway" type="markerType"/>
-	<xs:element name="sensitivezone" type="markerType"/>
-	<xs:element name="startofassistance" type="markerType"/>
-	<xs:element name="finishofassistance" type="markerType"/>
-	<xs:element name="startofzone" type="markerType"/>
-	<xs:element name="village" type="markerType"/>
+  <xs:element name="gps" type="markerType"/>
+  <xs:element name="passagecontrol" type="markerType"/>
+  <xs:element name="endfuel" type="markerType"/>
+  <xs:element name="radio" type="markerType"/>
+  <xs:element name="begintireservice" type="markerType"/>
+  <xs:element name="endtireservice" type="markerType"/>
+  <xs:element name="toilets" type="markerType"/>
+  <xs:element name="giveway" type="markerType"/>
+  <xs:element name="sensitivezone" type="markerType"/>
+  <xs:element name="startofassistance" type="markerType"/>
+  <xs:element name="finishofassistance" type="markerType"/>
+  <xs:element name="startofzone" type="markerType"/>
+  <xs:element name="village" type="markerType"/>
   -->
 
   <!-- data types -->
@@ -88,12 +97,14 @@
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
+
   <xs:simpleType name="unitsType">
     <xs:restriction base="xs:NMTOKEN">
       <xs:enumeration value="metric"/>
       <xs:enumeration value="statue"/>
     </xs:restriction>
   </xs:simpleType>
+
   <xs:simpleType name="dangerType">
     <xs:restriction base="xs:NMTOKEN">
       <xs:enumeration value="1"/>
@@ -104,9 +115,13 @@
       <!-- !!! -->
     </xs:restriction>
   </xs:simpleType>
+
   <xs:simpleType name="markerType">
-    <xs:restriction base="xs:string"/>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="0"/>
+    </xs:restriction>
   </xs:simpleType>
+
   <xs:simpleType name="distanceType">
     <xs:restriction base="xs:decimal">
       <xs:minInclusive value="0"/>
@@ -118,16 +133,19 @@
       <xs:minInclusive value="0"/>
     </xs:restriction>
   </xs:simpleType>
+
   <xs:simpleType name="speedType">
     <xs:restriction base="xs:positiveInteger">
-		</xs:restriction>
+    </xs:restriction>
   </xs:simpleType>
+
   <xs:simpleType name="capType">
     <xs:restriction base="xs:integer">
       <xs:minInclusive value="0"/>
       <xs:maxInclusive value="360"/>
     </xs:restriction>
   </xs:simpleType>
+
   <xs:complexType name="drawingType">
     <xs:simpleContent>
       <xs:extension base="xs:string">
@@ -157,4 +175,5 @@
       -->
     </xs:simpleContent>
   </xs:complexType>
+  
 </xs:schema>
