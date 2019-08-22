@@ -112,6 +112,8 @@
       <openrally:timecontrol/>
       <openrally:timecontrol allowed="60"/>
       <openrally:cap>360</openrally:cap>
+      <openrally:stop/> <!-- test with no time requirement -->
+      <openrally:reset/> <!-- test with default to 0.00 -->
     </extensions>
   </wpt>
 </gpx>

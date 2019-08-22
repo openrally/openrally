@@ -47,12 +47,12 @@
   <xs:element name="tulip" type="drawingType"/>
   <xs:element name="notes" type="drawingType"/>
   <!-- other control points -->
-  <xs:element name="stop" type="timeType"/>
+  <xs:element name="stop" type="timeType" default="0"/>
   <xs:element name="checkpoint" type="markerType"/>
   <xs:element name="neutralization" type="timeType"/>
   <xs:element name="timecontrol" type="timeLimitType"/>
   <xs:element name="fuel" type="markerType"/>
-  <xs:element name="reset" type="distanceType"/>
+  <xs:element name="reset" type="distanceType" default="0"/>
   <!--
   Duplicate of "stop" <xs:element name="stopcontrol" type="markerType"/>
   Replaced by reset <xs:element name="resettozero" type="markerType"/>
