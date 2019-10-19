@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <xs:schema
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns="http://www.openrally.org/xmlschemas/GpxExtensions/v1.0-Cross-Country-DRAFT"
+  xmlns="http://www.openrally.org/xmlschemas/GpxExtensions/v1.0.0"
   xmlns:svg="http://www.w3.org/2000/svg"
   attributeFormDefault="unqualified"
   elementFormDefault="qualified"
-  targetNamespace="http://www.openrally.org/xmlschemas/GpxExtensions/v1.0-Cross-Country-DRAFT"
+  targetNamespace="http://www.openrally.org/xmlschemas/GpxExtensions/v1.0.0"
   >
 
   <xs:element name="units" type="unitsType">
@@ -21,16 +21,16 @@
   Replaced by "danger" <xs:element name="threedanger" type="markerType"/>
   -->
   <!-- start/stop -->
-  <xs:element name="dss" type="markerType"/>
-  <xs:element name="ass" type="markerType"/>
+  <xs:element name="dss" type="waypointType"/>
+  <xs:element name="ass" type="waypointType"/>
   <!--
   Duplicate of "dss" <xs:element name="startspecialstage" type="markerType"/>
   Duplicate of "ass" <xs:element name="finishspecialstage" type="markerType"/>
   -->
   <!-- speed zones -->
-  <xs:element name="dz" type="markerType"/>
+  <xs:element name="dz" type="waypointType"/>
   <xs:element name="speed" type="speedType"/>
-  <xs:element name="fz" type="markerType"/>
+  <xs:element name="fz" type="waypointType"/>
   <!-- Duplicate of "fz" <xs:element name="endofzone" type="markerType"/> -->
   <!-- WP[x] waypoints -->
   <xs:element name="wpm" type="waypointType"/>
@@ -48,7 +48,7 @@
   <xs:element name="notes" type="drawingType"/>
   <!-- other control points -->
   <xs:element name="stop" type="timeType" default="0"/>
-  <xs:element name="checkpoint" type="markerType"/>
+  <xs:element name="checkpoint" type="namedType"/>
   <xs:element name="neutralization" type="timeType"/>
   <xs:element name="timecontrol" type="timeLimitType"/>
   <xs:element name="fuel" type="markerType"/>
@@ -94,6 +94,14 @@
         <xs:attribute type="xs:string" name="name"/>
         <xs:attribute type="xs:positiveInteger" name="open"/>
         <xs:attribute type="xs:positiveInteger" name="clear"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="namedType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="name"/>
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>

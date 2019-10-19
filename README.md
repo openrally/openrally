@@ -6,9 +6,16 @@ Except where otherwise noted, content on this site is licensed under a Creative 
 ## What is OpenRally?
 OpenRally is a community standard for electronic exchange of rally information. It is owned and maintained by those who choose to collaborate.
 
-## OpenRally Projects
-* OpenRally Enhanced GPX format
-* OpenRally Roadbook Exchange format (GPX + SVG tulips)
+## Compatbility
+These software and hardware projects currently support OpenRally format.
+
+### Roadbook Creation Software
+* Rally Navigator
+* RiverNotes
+
+### Devices
+* TowerOne
+* Rally Comp
 
 ## Collaborators
 (in order of joining)
@@ -16,13 +23,13 @@ OpenRally is a community standard for electronic exchange of rally information. 
 * Rally Navigator
 * CoMaster
 * F2R
-* RallyComp
+* Rally Comp
 * Amageza Rally
 * Hog Wild Racing
 * R3 - Roadbook Rally Raid
 * Tulip
 * Rally Blitz
-* Tripy
+* RiverNotes
 
 ## Mailing Lists
 For the latest news and announcements, subscribe to the OpenRally.org new mailing list by sending an email to [openrallynews-request](mailto:openrallynews-request@freelists.org?subject=subscribe) with 'subscribe' in the Subject field.
@@ -32,13 +39,15 @@ GPX is the most common geo-mapping file format. Most devices which record tracks
 
 GPX is also a format with many existing tools for converting.
 
+GPX was designed with extensibility in mind.
+
 ### But GPX is XML and XML is too verbose...
 It's true that XML *can* be more verbose than a binary format. However, once image data for tulips and notes fields are included, the weight of the XML text is negligible. Keep in mind, this is an *interchange* format, not the required format for storage or network transfer, which are entirely in the domain of the user. As an interchange format, ease of use is paramount.
 
-## What's new in v1.0-Cross-Country-DRAFT:
+## What's new in v1.0.0:
 * Separation of cross-country tags from road rally tags
 * Removal of duplicate tags
-* Specified sensible defaults in XSD, per FIM current regulations
+* Specified sensible defaults in XSD, per FIM or other current regulations
 * Inclusion of tulip and notes drawings/icons via base64 PNG or SVG
 
 ### Implementation notes
@@ -57,3 +66,8 @@ openrally.xsd validates
 test_wrapper.xsd validates
 example.gpx validates
 ```
+
+## What about road rally?
+OpenRally v1.0.0 targets cross-country rally only. For road rally, please see https://github.com/openrally/openrally/tree/v0.3-DRAFT. 
+
+We are looking for subject matter experts to contribute to OpenRally for road rally. Contact dave@icoracing.com if you want to contribute.

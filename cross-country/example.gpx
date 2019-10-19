@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <gpx
   xmlns="http://www.topografix.com/GPX/1/1"
-  creator="Oregon 400t" version="1.1"
+  creator="YOUR APPLICATION NAME HERE" version="1.1"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:openrally="http://www.openrally.org/xmlschemas/GpxExtensions/v1.0-Cross-Country-DRAFT"
+  xmlns:openrally="http://www.openrally.org/xmlschemas/GpxExtensions/v1.0.0"
   xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd
-                      http://www.openrally.org/xmlschemas/GpxExtensions/v1.0-Cross-Country-DRAFT openrally.xsd"
+                      http://www.openrally.org/xmlschemas/GpxExtensions/v1.0.0 openrally.xsd"
   >
 
   <metadata>
