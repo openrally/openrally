@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+
+  WARNING: This XSD is a wrapper around GPX which modifies the <extensions>
+  element to force strict validation. This is only intended to be used by
+  developers while testing and validating OpenRally GPX files. It is not
+  for production use or for live site use. IT IS NOT A SPECIFICATION!
+
+-->
+
+
+<xsd:schema
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns="http://www.topografix.com/GPX/1/1"
+  targetNamespace="http://www.topografix.com/GPX/1/1"
+  elementFormDefault="qualified"
+  >
+
+  <xsd:redefine schemaLocation="gpx.xsd">
+
+    <xsd:complexType name="extensionsType">
+      <xsd:complexContent>
+        <xsd:restriction base="extensionsType">
+          <xsd:sequence>
+            <xsd:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+          </xsd:sequence>
+        </xsd:restriction>
+      </xsd:complexContent>
+    </xsd:complexType>
+
+  </xsd:redefine>
+
+</xsd:schema>
