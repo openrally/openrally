@@ -6,6 +6,12 @@ Except where otherwise noted, content on this site is licensed under a Creative 
 ## What is OpenRally?
 OpenRally is a community standard for electronic exchange of rally information. It is owned and maintained by those who choose to collaborate.
 
+## What's new in v1.0.0:
+* Separation of cross-country tags from road rally tags
+* Removal of duplicate tags
+* Specified sensible defaults in XSD, per FIM or other current regulations
+* Inclusion of tulip and notes drawings/icons via base64 PNG or SVG
+
 ## Compatbility
 These software and hardware projects currently support OpenRally format.
 
@@ -44,16 +50,10 @@ GPX was designed with extensibility in mind.
 ### But GPX is XML and XML is too verbose...
 It's true that XML *can* be more verbose than a binary format. However, once image data for tulips and notes fields are included, the weight of the XML text is negligible. Keep in mind, this is an *interchange* format, not the required format for storage or network transfer, which are entirely in the domain of the user. As an interchange format, ease of use is paramount.
 
-## What's new in v1.0.0:
-* Separation of cross-country tags from road rally tags
-* Removal of duplicate tags
-* Specified sensible defaults in XSD, per FIM or other current regulations
-* Inclusion of tulip and notes drawings/icons via base64 PNG or SVG
+## Implementation notes
+Authors of software which are consuming OpenRally GPX files should inspect the version of the schema specified in the GPX document. Parsing should be according to the version specified. We will implement http://semver.org versioning as of v1.0.0.
 
-### Implementation notes
-Authors of software which are consuming OpenRally GPX files should inspect the version of the schema specified in the GPX document. Parsing should be according to the version specified. We will implement semver.org versioning as of v1.0.0.
-
-## Check out cross-country/example.gpx and cross-country/openrally.xsd for the latest specification
+### Check out cross-country/example.gpx and cross-country/openrally.xsd for the latest specification
 
 ## Testing/validation
 Please test and validate using xmllint.
