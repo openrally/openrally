@@ -53,7 +53,8 @@ It's true that XML *can* be more verbose than a binary format. However, once ima
 ## Implementation notes
 Authors of software which are consuming OpenRally GPX files should inspect the version of the schema specified in the GPX document. Parsing should be according to the version specified. We will implement http://semver.org versioning as of v1.0.0.
 
-### Check out cross-country/example.gpx and cross-country/openrally.xsd for the latest specification
+## Examples
+Check out cross-country/example.gpx and cross-country/openrally.xsd for the latest specification
 
 ## Testing/validation
 Please test and validate using xmllint.
