@@ -22,6 +22,7 @@ These software and hardware projects currently support OpenRally format.
 ### Devices
 * TowerOne
 * Rally Comp
+* RallyBlitz
 
 ## Collaborators
 (in order of joining)
