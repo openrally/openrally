@@ -1,12 +1,7 @@
 <?xml version="1.0"?>
-<xs:schema
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns="http://www.openrally.org/xmlschemas/GpxExtensions/v1.0.0"
-  xmlns:svg="http://www.w3.org/2000/svg"
-  attributeFormDefault="unqualified"
-  elementFormDefault="qualified"
-  targetNamespace="http://www.openrally.org/xmlschemas/GpxExtensions/v1.0.0"
-  >
+  xmlns:svg="http://www.w3.org/2000/svg" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.openrally.org/xmlschemas/GpxExtensions/v1.0.0">
 
   <xs:element name="units" type="unitsType">
     <!-- The valid "units" are "metric" or "statute". Under "metric", route distances are in kilometers, speeds are in kph, and waypoint radii are in meters. Under the "statute" measurement system, route distances are in statute miles, speeds are in mph, and waypoint radii are in yards. -->
@@ -50,6 +45,8 @@
   <xs:element name="stop" type="timeType" default="0"/>
   <xs:element name="checkpoint" type="namedType"/>
   <xs:element name="neutralization" type="timeType"/>
+  <!-- DEPRECATION WARNING: "neutralization" should be renamed to "sn" at next major version.-->
+  <xs:element name="fn" type="markerType"/>
   <xs:element name="timecontrol" type="timeLimitType"/>
   <xs:element name="fuel" type="markerType"/>
   <xs:element name="reset" type="distanceType" default="0"/>
@@ -172,8 +169,8 @@
   <xs:complexType name="drawingType">
     <xs:simpleContent>
       <xs:extension base="xs:string">
-          <xs:attribute type="xs:string" name="href"/>
-          <xs:attribute type="xs:string" name="id"/>
+        <xs:attribute type="xs:string" name="href"/>
+        <xs:attribute type="xs:string" name="id"/>
       </xs:extension>
       <!--
       May contain either an SVG or a base64 encoded dataUrl.
@@ -191,12 +188,12 @@
 
       Example (SVG):
       <o:tulip>
-        <![CDATA[
+<![CDATA[
           <svg width="100" height="100"><circle cx="50" cy="47" r="30" stroke="red" stroke-width="3" fill="none"/></svg>
         ]]>
-      </o:tulip>
+</o:tulip>
       -->
     </xs:simpleContent>
   </xs:complexType>
-  
+
 </xs:schema>
