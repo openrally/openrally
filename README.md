@@ -6,7 +6,12 @@ Except where otherwise noted, content on this site is licensed under a Creative 
 ## What is OpenRally?
 OpenRally is a community standard for electronic exchange of rally information. It is owned and maintained by those who choose to collaborate.
 
-## What's new in v1.0.0:
+## Release Notes:
+
+### v1.0.2:
+* Added new marker tag "show_coordinates" to indicate that GPS coordinates should be displayed to competitors
+
+### v1.0.0:
 * Separation of cross-country tags from road rally tags
 * Removal of duplicate tags
 * Specified sensible defaults in XSD, per FIM or other current regulations
@@ -70,6 +75,6 @@ example.gpx validates
 ```
 
 ## What about road rally?
-OpenRally is still in it's early stages and most adopters have been in cross-country rally. We're hopeful to add more support for road rally as interest grows. For now, cross-country users should use OpenRally v1.0.0, and road rally please see https://github.com/openrally/openrally/tree/v0.3-DRAFT. 
+OpenRally is still in it's early stages and most adopters have been in cross-country rally. We're hopeful to add more support for road rally as interest grows. For now, cross-country users should use OpenRally v1.0.2, and road rally please see https://github.com/openrally/openrally/tree/v0.3-DRAFT. 
 
 We are looking for subject matter experts to contribute to OpenRally for road rally. Contact dave.peckham@gmail.com if you want to contribute.

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <gpx xmlns="http://www.topografix.com/GPX/1/1" creator="YOUR APPLICATION NAME HERE" version="1.1"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:openrally="http://www.openrally.org/xmlschemas/GpxExtensions/v1.0.0" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd
-                      http://www.openrally.org/xmlschemas/GpxExtensions/v1.0.0 openrally.xsd">
+  xmlns:openrally="http://www.openrally.org/xmlschemas/GpxExtensions/v1.0.2" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd
+                      http://www.openrally.org/xmlschemas/GpxExtensions/v1.0.2 openrally.xsd">
 
   <metadata>
     <extensions>
@@ -104,6 +104,7 @@
   <wpt lat="0" lon="0">
     <extensions>
       <openrally:distance>0.35</openrally:distance>
+      <openrally:show_coordinates/>
       <openrally:wpc clear="20" name="ABC"/>
       <openrally:wpm open="800" clear="200" name="XYZ"/>
       <openrally:wps open="800" clear="20" name="K99"/>
