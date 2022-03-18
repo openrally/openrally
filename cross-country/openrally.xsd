@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns="http://www.openrally.org/xmlschemas/GpxExtensions/v1.0.0"
-  xmlns:svg="http://www.w3.org/2000/svg" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.openrally.org/xmlschemas/GpxExtensions/v1.0.0">
+  xmlns="http://www.openrally.org/xmlschemas/GpxExtensions/v1.0.2"
+  xmlns:svg="http://www.w3.org/2000/svg" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.openrally.org/xmlschemas/GpxExtensions/v1.0.2">
 
   <xs:element name="units" type="unitsType">
     <!-- The valid "units" are "metric" or "statute". Under "metric", route distances are in kilometers, speeds are in kph, and waypoint radii are in meters. Under the "statute" measurement system, route distances are in statute miles, speeds are in mph, and waypoint radii are in yards. -->
@@ -50,6 +50,10 @@
   <xs:element name="timecontrol" type="timeLimitType"/>
   <xs:element name="fuel" type="markerType"/>
   <xs:element name="reset" type="distanceType" default="0"/>
+
+  <!-- Instruct consumer to allow display of GPS coords for this WPT -->
+  <xs:element name="show_coordinates" type="markerType"/>
+
   <!--
   Duplicate of "stop" <xs:element name="stopcontrol" type="markerType"/>
   Replaced by reset <xs:element name="resettozero" type="markerType"/>
