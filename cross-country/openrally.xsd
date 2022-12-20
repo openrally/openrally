@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns="http://www.openrally.org/xmlschemas/GpxExtensions/v1.0.2"
-  xmlns:svg="http://www.w3.org/2000/svg" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.openrally.org/xmlschemas/GpxExtensions/v1.0.2">
+  xmlns="http://www.openrally.org/xmlschemas/GpxExtensions/v1.0.3"
+  xmlns:svg="http://www.w3.org/2000/svg" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.openrally.org/xmlschemas/GpxExtensions/v1.0.3">
 
   <xs:element name="units" type="unitsType">
     <!-- The valid "units" are "metric" or "statute". Under "metric", route distances are in kilometers, speeds are in kph, and waypoint radii are in meters. Under the "statute" measurement system, route distances are in statute miles, speeds are in mph, and waypoint radii are in yards. -->
@@ -33,6 +33,8 @@
   <xs:element name="wps" type="waypointType"/>
   <xs:element name="wpc" type="waypointType"/>
   <xs:element name="wpv" type="waypointType"/>
+  <xs:element name="wpp" type="waypointType"/>
+  <xs:element name="wpn" type="waypointType"/>
   <!--
   Duplicate of "wpe" <xs:element name="waypointeclipse" type="markerType"/>
   Duplicate of "wps" <xs:element name="waypointsafety" type="markerType"/>
@@ -43,16 +45,20 @@
   <xs:element name="notes" type="drawingType"/>
   <!-- other control points -->
   <xs:element name="stop" type="timeType" default="0"/>
-  <xs:element name="checkpoint" type="namedType"/>
+  <xs:element name="checkpoint" type="waypointType"/>
   <xs:element name="neutralization" type="timeType"/>
   <!-- DEPRECATION WARNING: "neutralization" should be renamed to "sn" at next major version.-->
-  <xs:element name="fn" type="markerType"/>
+  <xs:element name="fn" type="waypointType"/>
   <xs:element name="timecontrol" type="timeLimitType"/>
   <xs:element name="fuel" type="markerType"/>
   <xs:element name="reset" type="distanceType" default="0"/>
 
   <!-- Instruct consumer to allow display of GPS coords for this WPT -->
   <xs:element name="show_coordinates" type="markerType"/>
+
+<!-- Transfer Sections-->
+  <xs:element name="dt" type="waypointType"/>
+  <xs:element name="ft" type="waypointType"/>
 
   <!--
   Duplicate of "stop" <xs:element name="stopcontrol" type="markerType"/>

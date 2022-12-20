@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <gpx xmlns="http://www.topografix.com/GPX/1/1" creator="YOUR APPLICATION NAME HERE" version="1.1"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:openrally="http://www.openrally.org/xmlschemas/GpxExtensions/v1.0.2" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd
-                      http://www.openrally.org/xmlschemas/GpxExtensions/v1.0.2 openrally.xsd">
+  xmlns:openrally="http://www.openrally.org/xmlschemas/GpxExtensions/v1.0.3" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd
+                      http://www.openrally.org/xmlschemas/GpxExtensions/v1.0.3 openrally.xsd">
 
   <metadata>
     <extensions>
@@ -62,6 +62,84 @@
     <extensions>
       <openrally:distance>0.51</openrally:distance>
       <openrally:fn/>
+    </extensions>
+  </wpt>
+
+  <!-- Neutralized fuel stop with Speed Zone, 15 mins (900 seconds) -->
+  <wpt lat="0" lon="0">
+    <extensions>
+      <openrally:distance>0.5</openrally:distance>
+      <openrally:neutralization>900</openrally:neutralization>
+      <openrally:dz>40</openrally:dz>
+      <openrally:fuel/>
+    </extensions>
+  </wpt>
+  <wpt lat="0" lon="0">
+    <extensions>
+      <openrally:distance>0.51</openrally:distance>
+      <openrally:fn/>
+      <openrally:fz/>
+    </extensions>
+  </wpt>
+
+  <!-- Transfer with Speed Limit -->
+  <wpt lat="0" lon="0">
+    <extensions>
+      <openrally:distance>0.5</openrally:distance>
+      <openrally:dt/>
+      <openrally:dz>40</openrally:dz>
+      <openrally:fuel/>
+    </extensions>
+  </wpt>
+  <wpt lat="0" lon="0">
+    <extensions>
+      <openrally:distance>0.51</openrally:distance>
+      <openrally:ft/>
+      <openrally:fz/>
+    </extensions>
+  </wpt>
+
+  <!-- WP Types -->
+  <wpt lat="0" lon="0">
+    <extensions>
+      <openrally:distance>10</openrally:distance>
+      <openrally:wpm open="1000" clear="50" name="1"/>
+    </extensions>
+  </wpt>
+  <wpt lat="0" lon="0">
+    <extensions>
+      <openrally:distance>20</openrally:distance>
+      <openrally:wps open="1000" clear="50" name="2"/>
+    </extensions>
+  </wpt>
+  <wpt lat="0" lon="0">
+    <extensions>
+      <openrally:distance>30</openrally:distance>
+      <openrally:wpc open="1000" clear="50" name="3"/>
+    </extensions>
+  </wpt>
+  <wpt lat="0" lon="0">
+    <extensions>
+      <openrally:distance>40</openrally:distance>
+      <openrally:wpv open="1000" clear="50" name="4"/>
+    </extensions>
+  </wpt>
+  <wpt lat="0" lon="0">
+    <extensions>
+      <openrally:distance>50</openrally:distance>
+      <openrally:wpe open="1000" clear="50" name="5"/>
+    </extensions>
+  </wpt>
+  <wpt lat="0" lon="0">
+    <extensions>
+      <openrally:distance>60</openrally:distance>
+      <openrally:wpn open="1000" clear="50" name="6"/>
+    </extensions>
+  </wpt>
+  <wpt lat="0" lon="0">
+    <extensions>
+      <openrally:distance>70</openrally:distance>
+      <openrally:wpp open="1000" clear="50" name="7"/>
     </extensions>
   </wpt>
 
