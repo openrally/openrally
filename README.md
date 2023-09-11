@@ -77,5 +77,3 @@ example.gpx validates
 
 ## What about road rally?
 OpenRally is still in it's early stages and most adopters have been in cross-country rally. We're hopeful to add more support for road rally as interest grows. For now, cross-country users should use OpenRally v1.0.2, and road rally please see https://github.com/openrally/openrally/tree/v0.3-DRAFT. 
-
-We are looking for subject matter experts to contribute to OpenRally for road rally. Contact dave.peckham@gmail.com if you want to contribute.
