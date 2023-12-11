@@ -46,8 +46,15 @@
   <!-- other control points -->
   <xs:element name="stop" type="timeType" default="0"/>
   <xs:element name="checkpoint" type="waypointType"/>
+  <!-- neutralization was icluded as attribute on timedWaypointType. Kept here for retro-compatibility -->
   <xs:element name="neutralization" type="timeType"/>
   <!-- DEPRECATION WARNING: "neutralization" should be renamed to "sn" at next major version.-->
+  <!--dn:   neutralization zone 
+      dnz:  neutralization zone with speed zone
+      fn:   end of neutralization zone
+  -->
+  <xs:element name="dn" type="timedWaypointType"/>
+  <xs:element name="dnz" type="timedWaypointType"/>
   <xs:element name="fn" type="waypointType"/>
   <xs:element name="timecontrol" type="timeLimitType"/>
   <xs:element name="fuel" type="markerType"/>
@@ -57,7 +64,12 @@
   <xs:element name="show_coordinates" type="markerType"/>
 
 <!-- Transfer Sections-->
+<!--dt:   transfer zone 
+    dtz:  transfer zone with speed zone
+    ft:   end of transfer zone
+-->
   <xs:element name="dt" type="waypointType"/>
+  <xs:element name="dtz" type="waypointType"/>  
   <xs:element name="ft" type="waypointType"/>
 
   <!--
@@ -104,6 +116,17 @@
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
+
+  <xs:complexType name="timedWaypointType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="name"/>
+        <xs:attribute type="xs:positiveInteger" name="open"/>
+        <xs:attribute type="xs:positiveInteger" name="clear"/>
+        <xs:attribute type="xs:positiveInteger" name="time"/>      
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>  
 
   <xs:complexType name="namedType">
     <xs:simpleContent>

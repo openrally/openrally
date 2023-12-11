@@ -22,14 +22,14 @@
   <wpt lat="0" lon="0">
     <extensions>
       <openrally:distance>0.1</openrally:distance>
-      <openrally:dz/>
+      <openrally:dz open="1000" clear="90" name="1"/>
       <openrally:speed>65</openrally:speed>
     </extensions>
   </wpt>
   <wpt lat="0" lon="0">
     <extensions>
       <openrally:distance>0.2</openrally:distance>
-      <openrally:fz/>
+      <openrally:fz open="1000" clear="90" name="2"/>
     </extensions>
   </wpt>
 
@@ -38,7 +38,7 @@
     <extensions>
       <openrally:distance>0.3</openrally:distance>
       <openrally:danger>3</openrally:danger>
-      <openrally:wps open="800" clear="90"/>
+      <openrally:wps open="800" clear="90" name="1"/>
     </extensions>
   </wpt>
 
@@ -54,31 +54,44 @@
   <wpt lat="0" lon="0">
     <extensions>
       <openrally:distance>0.5</openrally:distance>
-      <openrally:neutralization>900</openrally:neutralization>
+      <openrally:dn open="1000" clear="90" name="1" time="900"/>
       <openrally:fuel/>
     </extensions>
   </wpt>
   <wpt lat="0" lon="0">
     <extensions>
       <openrally:distance>0.51</openrally:distance>
-      <openrally:fn/>
+      <openrally:fn open="1000" clear="90" name="2"/>
     </extensions>
   </wpt>
 
-  <!-- Neutralized fuel stop with Speed Zone, 15 mins (900 seconds) -->
+  <!-- Neutralized fuel stop with Speed Zone (40kph), 15 mins (900 seconds) -->
   <wpt lat="0" lon="0">
     <extensions>
       <openrally:distance>0.5</openrally:distance>
-      <openrally:neutralization>900</openrally:neutralization>
-      <openrally:dz>40</openrally:dz>
+      <openrally:dnz open="1000" clear="90" name="1" time="900"/>
+      <openrally:speed>40</openrally:speed>
       <openrally:fuel/>
     </extensions>
   </wpt>
   <wpt lat="0" lon="0">
     <extensions>
       <openrally:distance>0.51</openrally:distance>
-      <openrally:fn/>
-      <openrally:fz/>
+      <openrally:fn open="1000" clear="90" name="2"/>
+    </extensions>
+  </wpt>
+
+  <!-- Transfer -->
+  <wpt lat="0" lon="0">
+    <extensions>
+      <openrally:distance>0.5</openrally:distance>
+      <openrally:dt open="1000" clear="90" name="1"/>
+    </extensions>
+  </wpt>
+  <wpt lat="0" lon="0">
+    <extensions>
+      <openrally:distance>0.51</openrally:distance>
+      <openrally:ft open="1000" clear="90" name="2"/>
     </extensions>
   </wpt>
 
@@ -86,16 +99,14 @@
   <wpt lat="0" lon="0">
     <extensions>
       <openrally:distance>0.5</openrally:distance>
-      <openrally:dt/>
-      <openrally:dz>40</openrally:dz>
-      <openrally:fuel/>
+      <openrally:dtz open="1000" clear="90" name="1"/>
+      <openrally:speed>40</openrally:speed>
     </extensions>
   </wpt>
   <wpt lat="0" lon="0">
     <extensions>
       <openrally:distance>0.51</openrally:distance>
-      <openrally:ft/>
-      <openrally:fz/>
+      <openrally:ft open="1000" clear="90" name="2"/>
     </extensions>
   </wpt>
 
