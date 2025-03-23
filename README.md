@@ -46,7 +46,7 @@ These software and hardware projects currently support OpenRally format.
 * TerraPirata
 
 ## Mailing Lists
-For the latest news and announcements, subscribe to the OpenRally.org new mailing list by sending an email to [openrallynews-request](mailto:openrallynews-request@freelists.org?subject=subscribe) with 'subscribe' in the Subject field.
+To join the discussion or follow along, subscribe to the OpenRally.org mailing list by sending an email to [openrally-request](mailto:openrally-request@freelists.org?subject=subscribe) with 'subscribe' in the Subject field.
 
 ## Why GPX?
 GPX is the most common geo-mapping file format. Most devices which record tracks or have online maps can import/export GPX format.
